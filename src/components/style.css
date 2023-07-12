@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: Inter;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -20,8 +21,35 @@ body {
   position: relative;
 }
 
-.info {
+.navbar {
   position: fixed;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  padding: 10px 20px;
+  z-index: 100;
+  color: white;
+  background-color: rgb(22, 25, 29);
+}
+
+.navbar > h1 {
+  font-size: 25px;
+  margin-right: auto;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+}
+
+.navbar-list > a {
+  text-decoration: none;
+  margin-left: 10px;
+  color: white;
+}
+
+.info {
+  margin-top: 65px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -78,7 +106,6 @@ body {
 
 .about {
   padding: 10px 35px;
-  margin-top: 340px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -115,4 +142,16 @@ body {
 
 .social {
   width: 25px;
+}
+
+@media (min-width: 393px) {
+  .navbar-list > a {
+    margin-left: 10px;
+  }
+  .info .img {
+    width: 100vw;
+  }
+  .about {
+    width: 100vw;
+  }
 }
